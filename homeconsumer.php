@@ -22,7 +22,7 @@
 		<h1>Home Automation System</h1>
 		<nav>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Give us feedback</a></li>
                 <li><a href="logout.php">Logout</a></li>
