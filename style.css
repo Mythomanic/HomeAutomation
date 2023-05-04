@@ -1,14 +1,14 @@
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-    background-color: blanchedalmond;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cb9058;
 }
 
 header {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
+    background-color: #8f623b;
+    color: #fff;
+    padding: 20px;
 }
 
 nav {
@@ -55,7 +55,7 @@ h2 {
 }
 
 .product-box {
-    background-color: rgb(236, 185, 133);
+    background-color: #f1d079;
 	width: 200px;
 	height: 320px;
 	margin: 10px;
@@ -174,3 +174,4 @@ footer {
 	font-size: 16px;
 	cursor: pointer;
 }
+
