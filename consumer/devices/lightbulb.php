@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title>Home Automation System</title>
-        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="../../style.css">
     </head>
 </head>
 <body>
@@ -15,10 +15,10 @@
 		<h1>Home Automation System</h1>
 		<nav>
 			<ul>
-				<li><a href="homeconsumer.php">Home</a></li>
+            <li><a href="../home-consumer.php">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a href="../../logout.php">Logout</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -28,11 +28,11 @@
 <main>
     <div class="product-container">
         <div class="product-box">
-            <h3 style="transform: translate(-50%, 50%)">Thermostat</h3>
+            <h3 style="transform: translate(-50%, -40%)">Light Bulb</h3>
             <button class="on-off-btn">ON</button>
             <div class="slider-container">
                 <input class="slider" type="range" min="0" max="100">
-                <span class="slider-value" style="transform: translate(-50%, -40%)">50</span>
+                <span class="slider-value" >50</span>
             </div>
         
         </div>
@@ -41,10 +41,10 @@
     <div>
 <ul>
     <li>
-        Spesifications of the thermostat
+        Spesifications of the lightbulb
     </li>
     <li>
-        Spesifications of the thermostat
+        Spesifications of the lightbulb
     </li>
 </ul>
 
@@ -73,7 +73,7 @@
         });
     });
     </script>
-    
+
     <script>// Get the slider input element
         var slider = document.querySelector('.slider');
         
@@ -86,7 +86,6 @@
             var sliderValueDisplay = this.nextElementSibling;
             sliderValueDisplay.innerHTML = sliderValue;
         });</script>
-
-
+    
 </body>
 </html>

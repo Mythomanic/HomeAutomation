@@ -1,7 +1,7 @@
 <?php session_start(); /* Starts the session */
 
 if(!isset($_SESSION['UserData']['Username'])){
-        header("location:login-producer.php");
+        header("location:../producer/login-producer.php");
         exit;
 }
 ?>
@@ -9,7 +9,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <html>
 <head>
 	<title>Home Automation System - Producer Page</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script src="https://kit.fontawesome.com/1c2ecd6357.js" crossorigin="anonymous"></script>
 
 	<style>
@@ -34,7 +34,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
-				<li><a href="logout.php">Logout</a></li>
+				<li><a href="../logout.php">Logout</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -46,23 +46,23 @@ if(!isset($_SESSION['UserData']['Username'])){
 	<section>
 			<h2 style="text-align:center">Devices</h2>
 			<div class="product-container">
-				<a href="devicesProfile.php"><div class="product-box">
+				<a href="../producer/devicesProfile.php"><div class="product-box">
 				<i class="fa-solid fa-lightbulb"></i>
 					<h3>Light bulb</h3>
 				</div></a>
-				<a href="devicesProfile.php"><div class="product-box">
+				<a href="../producer/devicesProfile.php"><div class="product-box">
 				<i class="fa-solid fa-temperature-three-quarters"></i>
 					<h3>Thermostat Sensor</h3>
 				</div></a>
-				<a href="devicesProfile.php"><div class="product-box">
+				<a href="../producer/devicesProfile.php"><div class="product-box">
 				<i class="fa-solid fa-house-lock"></i>
 					<h3>Smart Lock</h3>
 				</div></a>
-				<a href="devicesProfile.php"><div class="product-box">
+				<a href="../producer/devicesProfile.php"><div class="product-box">
 				<i class="fa-solid fa-video"></i>
 					<h3>Security Camera</h3>
 				</div></a>
-                <a href="devicesProfile.php"><div class="product-box">
+                <a href="../producer/devicesProfile.php"><div class="product-box">
 				<i class="fa-solid fa-plus"></i>
 					<h3>Add New Device</h3>
                     
@@ -76,23 +76,23 @@ if(!isset($_SESSION['UserData']['Username'])){
 		<section>
 			<h2 style="text-align:center">Users</h2>
 			<div class="product-container">
-				<a href="usersProfile.php"><div class="product-box">
+				<a href="../producer/usersProfile.php"><div class="product-box">
 				<i class="fa-solid fa-user"></i>
 					<h3>User 1</h3>
 				</div></a>
-				<a href="usersProfile.php"><div class="product-box">
+				<a href="../producer/usersProfile.php"><div class="product-box">
 				<i class="fa-solid fa-user"></i>
 					<h3>User 2</h3>
 				</div></a>
-				<a href="usersProfile.php"><div class="product-box">
+				<a href="../producer/usersProfile.php"><div class="product-box">
 				<i class="fa-solid fa-user"></i>
 					<h3>User 3</h3>
 				</div></a>
-				<a href="usersProfile.php"><div class="product-box">
+				<a href="../producer/usersProfile.php"><div class="product-box">
 				<i class="fa-solid fa-user"></i>
 					<h3>User 4</h3>
 				</div></a>
-                <a href="usersProfile.php"><div class="product-box">
+                <a href="../producer/usersProfile.php"><div class="product-box">
 				<i class="fa-solid fa-user-plus"></i>
 					<h3>Add New User</h3>
                     
