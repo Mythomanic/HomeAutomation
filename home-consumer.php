@@ -9,13 +9,14 @@
 
 	<title>Home Automation System</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/1c2ecd6357.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
-		<h1>Home Automation System</h1>
+		<h1>Home Automation System - Consumer Page</h1>
 		<nav>
 			<ul>
-				<li><a href="index.php">Home</a></li>
+				<li><a href="home-consumer.php">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Give us feedback</a></li>
                 <li><a href="logout.php">Logout</a></li>
@@ -30,29 +31,34 @@
 		</section>
 		
 		<section>
-			<h2>Your Products</h2>
+			<h2 style="text-align:center">Your Products</h2>
 			<div class="product-container">
-                <a href="lightbulb.php"><div class="product-box">                   
-                    <h3>Light Bulb</h3>
+                <a href="devices/lightbulb.php"><div class="product-box">
+                <i class="fa-solid fa-lightbulb"></i>                   
+                    <h3 style="transform: translate(-50%, -40%)">Light Bulb</h3>
                     <button class="button">Click to manage</button>
                 </div></a>
 
-                <a href="thermostat.php"><div class="product-box">
-                    <h3>Thermostat</h3>
+                <a href="devices/thermostat.php"><div class="product-box">
+                <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <h3 style="transform: translate(-50%, -40%)">Thermostat</h3>
                 <button class="button">Click to manage</button>
                     
                 </div></a>
-                <a href="smartlock.php"><div class="product-box">
-                    <h3>Smart Lock</h3>
+                <a href="devices/smartlock.php"><div class="product-box">
+                <i class="fa-solid fa-house-lock"></i>
+                    <h3 style="transform: translate(-50%, -40%)">Smart Lock</h3>
                 <button class="button">Click to manage</button>
                 </div></a>
-                <a href="camera.php"><div class="product-box">
-                    <h3>Security Camera</h3>
+                <a href="devices/camera.php"><div class="product-box">
+                <i class="fa-solid fa-video"></i>
+                    <h3 style="transform: translate(-50%, -40%)">Security Camera</h3>
                 <button class="button">Click to manage</button>
                 </div></a>
                 <a href=""><div class="product-box">
-                    <h3>Add new product</h3>
-                    <button class="button">+</button>
+                <i class="fa-solid fa-plus"></i>
+                    <h3 style="transform: translate(-50%, -40%)">Add new product</h3>
+                    <button class="button" style="text-decoration:none">+</button>
                 
                 </div></a>
             </div>

@@ -31,7 +31,7 @@ if(isset($_POST['Submit'])){
 
     <style>
         body {
-            background-color: #cb9058;
+            background-color:  #bdc2e6;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -41,7 +41,7 @@ if(isset($_POST['Submit'])){
         .container {
             width: 400px;
             height: 250px;
-            background-color: #f1d079;
+            background-color: #e7eaf6;
             border: solid black 2px;
             border-radius: 6px;
             font-family: Arial, Helvetica, sans-serif;
@@ -86,15 +86,12 @@ if(isset($_POST['Submit'])){
             background-color: #0077bb;
         }
 
-        .color1 {color: #181607;}
-.color2 {color: #31360e;}
-.color3 {color: #5e6324;}
-.color4 {color: #929e3a;}
-.color5 {color: #dbe257;}
     </style>
 </head>
 
 <body>
+
+
 
     <div class="container">
         <?php if(isset($msg)){?>

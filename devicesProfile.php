@@ -1,44 +1,61 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Home Automation System</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Home Automation System</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 </head>
 <body>
-	<header>
+    <header>
 		<h1>Home Automation System</h1>
 		<nav>
 			<ul>
-				<li><a href="homeProducer.php">Home</a></li>
+				<li><a href="home-producer.php">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
-				<li><a href="logout.php">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
+
 			</ul>
 		</nav>
 	</header>
 
-	
-	<main>
-		<section>
-			<h2>Device Profile Page</h2>
-			
-		</section>
-		
-		<section>
-			<h2>Device 1 has these properties</h2>
-			<div class="product-container">
-					<h3>Device 1</h3>
-                    
-				</div></a>
-				
-                
-			</div>
-		</section>
-	</main>
-	
-	
+
+
+<main>
+    <div class="product-container">
+        <div class="product-box">
+            <h3>Devices</h3>
+                  
+        </div>
+    </div>
+    
+    <div>
+<ul style>
+    <li>
+        Property 1
+    </li>
+    <li>
+	Property 2
+	<li>
+	Property 3
+    </li>
+	<li>
+	Property 4
+    </li>
+</ul>
+
+
+    </div>
+
+
+
+</main>
+
+
+    
 </body>
 </html>
-

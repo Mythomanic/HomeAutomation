@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title>Home Automation System</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
 </head>
 <body>
@@ -14,10 +14,10 @@
 		<h1>Home Automation System</h1>
 		<nav>
 			<ul>
-				<li><a href="homeconsumer.php">Home</a></li>
+				<li><a href="home-consumer.php">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="../logout.php">Logout</a></li>
 
 			</ul>
 		</nav>
@@ -28,7 +28,7 @@
 <main>
     <div class="product-container">
         <div class="product-box">
-            <h3>Smart Lock</h3>
+            <h3 style="transform: translate(-50%, -40%)">Smart Lock</h3>
             <button class="on-off-btn">ON</button>      
         </div>
     </div>

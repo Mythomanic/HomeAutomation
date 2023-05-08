@@ -6,78 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing  Page</title>
 
-    <style>
-        body {
-            background-color: #cb9058;
-            height: 80vh;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            width: 500px;
-            border: 2px solid #ccc;
-            padding: 30px;
-            background: #f1d079;
-            border-radius: 15px;
-        }
-
-        * {
-            font-family: Arial, Helvetica, sans-serif;
-            box-sizing: border-box;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        button {
-            background: #555;
-            padding: 10px 15px;
-            color: #fff;
-            border-radius: 5px;
-            border: none;
-        }
-
-        button:hover {
-            opacity: .7;
-        }
-
-        .color1 {color: #181607;}
-.color2 {color: #31360e;}
-.color3 {color: #5e6324;}
-.color4 {color: #929e3a;}
-.color5 {color: #dbe257;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
 
-<h1>Home Automation Site</h1>
+    <header>
+		<h1 style="text-align: center;">Home Automation System</h1>
+		
+	</header>
 
-<div style="margin-left: 705px; margin-top: 100px;">
-    <form action="login-producer.php">
-        <h2>Login for Producer</h2>
-        <div class="button-container">
-            <button style="width: 110px;" type="submit">Login</button>
+    <section style="margin-top: 250px;">
+        
+        <div class="product-container" >
+            
+            <a href="login-producer.php">
+                <div class="product-box" style="width: 250px;height: 180px;margin-right: 50px;">
+            <h3 style="transform: translate(-50%, -40%);">Login for Producer</h2>
+                
+                
+            </div></a>
+            
+            <a href="login-consumer.php">
+                <div class="product-box" style="width: 250px;height: 180px;">
+            <h3 style="transform: translate(-50%, -40%)">Login for Consumer</h2>
+                
+                
+            </div></a>
+            
+            
         </div>
-    </form><br>
+    </section>
 
-    <form action="login-consumer.php">
-        <h2>Login for Consumer</h2>
-        <div class="button-container">
-            <button style="width: 110px;" type="submit">Login</button>
-        </div>
-    </form>
-</div>
+
 
 </body>
 </html>

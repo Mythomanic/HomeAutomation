@@ -8,12 +8,27 @@ if(!isset($_SESSION['UserData']['Username'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home Automation System</title>
+	<title>Home Automation System - Producer Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/1c2ecd6357.js" crossorigin="anonymous"></script>
+
+	<style>
+  
+  hr.new5 {
+  border: 5px dashed white;
+  border-radius: 5px;
+}
+
+
+  
+  
+  
+</style>
+
 </head>
 <body>
 	<header>
-		<h1>Home Automation System</h1>
+		<h1>Home Automation System - Producer Page</h1>
 		<nav>
 			<ul>
 				<li><a href="#">Home</a></li>
@@ -32,43 +47,53 @@ if(!isset($_SESSION['UserData']['Username'])){
 			<h2 style="text-align:center">Devices</h2>
 			<div class="product-container">
 				<a href="devicesProfile.php"><div class="product-box">
+				<i class="fa-solid fa-lightbulb"></i>
 					<h3>Light bulb</h3>
 				</div></a>
 				<a href="devicesProfile.php"><div class="product-box">
-					<h3>Thermostat</h3>
+				<i class="fa-solid fa-temperature-three-quarters"></i>
+					<h3>Thermostat Sensor</h3>
 				</div></a>
 				<a href="devicesProfile.php"><div class="product-box">
+				<i class="fa-solid fa-house-lock"></i>
 					<h3>Smart Lock</h3>
 				</div></a>
 				<a href="devicesProfile.php"><div class="product-box">
+				<i class="fa-solid fa-video"></i>
 					<h3>Security Camera</h3>
 				</div></a>
                 <a href="devicesProfile.php"><div class="product-box">
+				<i class="fa-solid fa-plus"></i>
 					<h3>Add New Device</h3>
                     
 				</div></a>
 			</div>
 		</section>
 
-<hr><br>
+<hr class="new5"><br>
 
 		
 		<section>
 			<h2 style="text-align:center">Users</h2>
 			<div class="product-container">
 				<a href="usersProfile.php"><div class="product-box">
+				<i class="fa-solid fa-user"></i>
 					<h3>User 1</h3>
 				</div></a>
 				<a href="usersProfile.php"><div class="product-box">
+				<i class="fa-solid fa-user"></i>
 					<h3>User 2</h3>
 				</div></a>
 				<a href="usersProfile.php"><div class="product-box">
+				<i class="fa-solid fa-user"></i>
 					<h3>User 3</h3>
 				</div></a>
 				<a href="usersProfile.php"><div class="product-box">
+				<i class="fa-solid fa-user"></i>
 					<h3>User 4</h3>
 				</div></a>
                 <a href="usersProfile.php"><div class="product-box">
+				<i class="fa-solid fa-user-plus"></i>
 					<h3>Add New User</h3>
                     
 				</div></a>
