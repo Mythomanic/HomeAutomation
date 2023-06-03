@@ -25,98 +25,51 @@ if(isset($_POST['Submit'])){
 
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Login for Producer</title>
-
-    <style>
-        body {
-            background-color: #bdc2e6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 400px;
-            height: 250px;
-            background-color: #e7eaf6;
-            border: solid black 2px;
-            border-radius: 6px;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h3 {
-            margin-top: 0;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            padding: 5px;
-            border-radius: 4px;
-            border: 1px solid gray;
-        }
-
-        .error-message {
-            color: red;
-        }
-
-        .button {
-            padding: 5px 15px;
-            margin-top: 10px;
-            border-radius: 4px;
-            border: none;
-            background-color: #1e90ff;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #0077bb;
-        }
-
-        .color1 {color: #181607;}
-.color2 {color: #31360e;}
-.color3 {color: #5e6324;}
-.color4 {color: #929e3a;}
-.color5 {color: #dbe257;}
-    </style>
+    <title>Login for Consumer</title>
+    <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
 </head>
+<body style="background-color:#bdc2e6">
+    <div class="container-fluid">
+        <div class="row bg-primary py-3">
+            <div class="col text-white text-center">
+                <h1>Home Automation System - Consumer Page</h1>
+            </div>
+        </div>
 
-<body>
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-4">
+                <?php if(isset($msg)){?>
+                    <div class="alert alert-danger"><?php echo $msg;?></div>
+                <?php } ?>
 
+                <div class="card p-4">
+                    <h3 class="mb-4">Login for Consumer</h3>
 
+                    <form action="" method="post" name="Login_Form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input name="Username" type="text" id="username" class="form-control">
+                        </div>
 
-    <div class="container">
-        <?php if(isset($msg)){?>
-            <div class="error-message"><?php echo $msg;?></div>
-        <?php } ?>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input name="Password" type="password" id="password" class="form-control">
+                        </div>
 
-        <h3>Login for Consumer</h3>
-
-        <form action="" method="post" name="Login_Form">
-            <label for="username">Username</label><br>
-            <input name="Username" type="text" id="username">
-
-            <label for="password">Password</label>
-            <input name="Password" type="password" id="password">
-
-            <input name="Submit" type="submit" value="Login" class="button">
-        </form>
-
+                        <div class="text-center">
+                            <input name="Submit" type="submit" value="Login" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
     </div>
-
+    <footer class="row bg-primary py-3 mt-4">
+            <div class="col text-white text-center">
+                &copy; <?php echo date('Y'); ?> Home Automation System. All rights reserved.
+            </div>
+        </footer>
 </body>
-
 </html>

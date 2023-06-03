@@ -4,41 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing  Page</title>
+    <title>Landing Page</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="stylesheet" href=".\css\bootstrap.min.css">
 </head>
-<body>
+<body style="background-color:#bdc2e6;">
 
-    <header>
-		<h1 style="text-align: center;">Home Automation System</h1>
-		
-	</header>
+    <header class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Home Automation System</h1>
+        </div>
+    </header>
 
-    <section style="margin-top: 250px;">
-        
-        <div class="product-container" >
-            
-            <a href="./producer/login-producer.php">
-                <div class="product-box" style="width: 250px;height: 180px;margin-right: 50px;">
-            <h3 style="transform: translate(-50%, -40%);">Login for Producer</h2>
-                
-                
-            </div></a>
-            
-            <a href="./consumer/login-consumer.php">
-                <div class="product-box" style="width: 250px;height: 180px;">
-            <h3 style="transform: translate(-50%, -40%)">Login for Consumer</h2>
-                
-                
-            </div></a>
-            
-            
+    <section class="mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="./producer/login-producer.php" class="text-decoration-none">
+                        <div class="card shadow text-center">
+                            <div class="card-body">
+                                <h3 class="card-title">Login for Producer</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="./consumer/login-consumer.php" class="text-decoration-none">
+                        <div class="card shadow text-center">
+                            <div class="card-body">
+                                <h3 class="card-title">Login for Consumer</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-
-
+    <script src=".\js\bootstrap.min.js"></script>
 </body>
 </html>
