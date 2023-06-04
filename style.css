@@ -131,3 +131,14 @@ svg {
     height: 80;
 
 }
+
+body{
+  background-color: rgb(216, 235, 235);
+}
+
+.card{
+  background-color: rgb(177, 177, 177);
+}
+.card-body{
+  text-align: center;
+}

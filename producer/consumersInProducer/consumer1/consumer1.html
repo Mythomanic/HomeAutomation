@@ -22,22 +22,22 @@
                 <a href="../../home-producer.html">Dashboard</a>
             </li>
             <li>
-                <a href="#">Shortcuts</a>
+                <a href="#">Consumers</a>
             </li>
             <li>
                 <a href="#">Overview</a>
             </li>
             
             <li>
-              <a href="../../../logout.php">
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                  </svg>
-                </span>
-                Logout
-              </a>
+                <a href="../logout.php">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                  </span>
+                  Logout
+                </a>
             </li>
             <li class="mt-lg-4">
               <a style="font-size:xxx-large;" href="#">
@@ -50,82 +50,107 @@
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <h1>Consumer 1 has these devices:</h1>
-            <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-            
+    <div>
+        <div class="container-lg">
+          <nav style="background-color: rgb(12, 12, 12); height: 90px;" class="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light">Producer Dashboard - Consumer 1 Devices</a>
+              <form class="d-flex mr-lg-3" role="search">
+                
+                
+                <input class="form-control me-2 mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light mr-lg-4" type="submit">Search</button>
+                <button class="btn btn-outline-light" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                </svg>
+                </button>
+              </form>
+            </div>
+          </nav>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
-
 </div>
 
-
-  <h2 class="text-center mt-lg-4 mb-lg-4">Consumer 1's Devices
-  </h1>
-      <div id="main-content" class="container my-lg-5">
+      <div class="container my-lg-5">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <a href="cons1LightBulbs.html">
-              <div class="card">
+              <div class="card mb-3">
+                <img src="../../../img/lightbulb.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-center">
-                    Lightbulbs
-                  </p>
+                  <h5 class="card-title">Lightbulbs</h5>
+                  
+                  <p class="card-text"><small class="text-body-secondary">Last updated 2 mins ago</small></p>
                 </div>
-                <img style="height: 262px;"  src="../../../img/lightbulb.jpg" class="card-img-top" alt="...">
-                
               </div>
+
             </a>
             
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <a href="cons1SecCams.html">
-              <div class="card" >
+              <div class="card mb-3">
+                <img src="../../../img/security.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-center">
-                    Security Cameras
-                  </p>
+                  <h5 class="card-title">Security Cameras</h5>
+                  
+                  <p class="card-text"><small class="text-body-secondary">Last updated 1 mins ago</small></p>
                 </div>
-                <img src="../../images/secCam.png" class="card-img-top" alt="...">
-                
               </div>
             </a>
             
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <a href="cons1Thermos.html">
-              <div class="card" >
+              <div class="card mb-3">
+                <img style="height: 253px;" src="../../images/thermo.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-center">
-                    Thermostat
-                  </p>
+                  <h5 class="card-title">Heaters</h5>
+                  
+                  <p class="card-text"><small class="text-body-secondary">Last updated 1h ago</small></p>
                 </div>
-                <img src="../../images/thermostat.jpg" class="card-img-top" alt="...">
-                
               </div>
             </a>
             
           </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-3">
             <a href="cons1SmartLocks.html">
-              <div class="card" >
+              <div class="card mb-3">
+                <img src="../../../img/smartlock.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text text-center">
-                    Smart Locks
-                  </p>
+                  <h5 class="card-title">Smartlocks</h5>
+                  
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                 </div>
-                <img  src="../../../img/smartlock.jpg" class="card-img-top" alt="...">
-                
               </div>
             </a>
             
           </div>
         </div>
+
+        <div class="row ">
+          
+          <div class="col">
+            <div class="card justify-content-center align-items-center">
+              <div class="card-body">
+                <h5 class="card-title">Total Consumption</h5>
+                <p class="card-text">This user consumes an average of 100w per hour.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+              <canvas id="chartId" aria-label="chart" height="350" width="580"></canvas>
+            </div>
+          </div>
+          
+
+          
+
+        </div>
+        
+        
+          
+        
       </div>
 
 
@@ -136,6 +161,28 @@
 
 
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/helpers.esm.min.js">
+   </script>
+   <script>
+      var chrt = document.getElementById("chartId").getContext("2d");
+      var chartId = new Chart(chrt, {
+         type: 'bar',
+         data: {
+            labels: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            datasets: [{
+               label: "total consumption (w)",
+               data: [1003, 2305, 1560, 899, 1976, 450,2400],
+               backgroundColor: ['lightblue'],
+               borderColor: ['red', 'blue', 'fuchsia', 'green', 'navy', 'black'],
+               borderWidth: 2,
+            }],
+         },
+         options: {
+            responsive: false,
+         },
+      });
+   </script>
       <script>
         function startTime() {
           const today = new Date();

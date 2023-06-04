@@ -49,31 +49,45 @@
                 <b><div class="card-header bg-secondary text-center">Kitchen light bulb</div></b>
                 <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
                 <div class="card-body text-secondary bg-secondary text-center">
+
+                    
                     <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-success toggle-button mb-3">ON</button>
-                        <input type="range" class="form-range" min="0" max="100" value="50" id="lightbulb-slider-1">
-                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="slider-value-1">50</span>
+                        <form action="lightbulb.php" method="POST">
+                            <button name="kitchenLightBulb" class="btn btn-success toggle-button mb-3">ON</button>
+                            </form>
+                            <input  type="range" class="form-range" min="0" max="100" value="50" id="lightbulb-slider-1">
+                        
+                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center">
+                            Brightness: <span id="lightbulb-value-1">50</span>%
+                        </span>
                     </div>
+                    <form action="lightbulb.php" method="POST">
+                        <button name="kitchenLightBulb" class="btn btn-danger toggle-button">OFF</button>
+                    </form>
                 </div>
             </div>
         </div>
-
 
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="card border-secondary mb-3">
-                <b><div class="card-header bg-secondary text-center">Living room light bulb</div></b>
+                <b><div class="card-header bg-secondary text-center">Living Room light bulb</div></b>
                 <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
                 <div class="card-body text-secondary bg-secondary text-center">
                     <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-success toggle-button mb-3">ON</button>
+                        <form action="lightbulb.php" method="POST">
+                            <button name="livingRoomLightBulb" class="btn btn-success toggle-button mb-3">ON</button>
+                        </form>
                         <input type="range" class="form-range" min="0" max="100" value="50" id="lightbulb-slider-2">
-                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="slider-value-2">50</span>
+                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center">
+                            Brightness: <span id="lightbulb-value-2">50</span>%
+                        </span>
                     </div>
+                    <form action="lightbulb.php" method="POST">
+                        <button name="livingRoomLightBulb" class="btn btn-danger toggle-button">OFF</button>
+                    </form>
                 </div>
             </div>
         </div>
-
-
 
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="card border-secondary mb-3">
@@ -81,15 +95,20 @@
                 <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
                 <div class="card-body text-secondary bg-secondary text-center">
                     <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-success toggle-button mb-3">ON</button>
+                        <form action="lightbulb.php" method="POST">
+                            <button name="bedroomLightBulb" class="btn btn-success toggle-button mb-3">ON</button>
+                        </form>
                         <input type="range" class="form-range" min="0" max="100" value="50" id="lightbulb-slider-3">
-                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="slider-value-3">50</span>
+                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center">
+                            Brightness: <span id="lightbulb-value-3">50</span>%
+                        </span>
                     </div>
+                    <form action="lightbulb.php" method="POST">
+                        <button name="bedroomLightBulb" class="btn btn-danger toggle-button">OFF</button>
+                    </form>
                 </div>
             </div>
         </div>
-
-
 
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="card border-secondary mb-3">
@@ -97,111 +116,69 @@
                 <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
                 <div class="card-body text-secondary bg-secondary text-center">
                     <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-success toggle-button mb-3">ON</button>
+                        <form action="lightbulb.php" method="POST">
+                            <button name="bathroomLightBulb" class="btn btn-success toggle-button mb-3">ON</button>
+                        </form>
                         <input type="range" class="form-range" min="0" max="100" value="50" id="lightbulb-slider-4">
-                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="slider-value-4">50</span>
+                        <span class="input-group-text flex-fill d-flex justify-content-center align-items-center">
+                            Brightness: <span id="lightbulb-value-4">50</span>%
+                        </span>
                     </div>
+                    <form action="lightbulb.php" method="POST">
+                        <button name="bathroomLightBulb" class="btn btn-danger toggle-button">OFF</button>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-4 col-lg-3">
-    <div class="card border-secondary mb-3">
-    <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
-        <div class="card-body text-secondary bg-secondary text-center">
-            <h5 class="card-title">Add another lightbulb</h5>
-            <p class="card-text">Click the button below to add a new lightbulb.</p>
-            <button class="btn btn-primary">Add another lightbulb</button>
-        </div>
     </div>
-</div>
-
-
-
-
-    </div>
-</section>
+    </section>
 
     </main>
     
-    <footer class="bg-dark text-white text-center py-4" style="transform: translate(0%, 75%)">
-        <div class="container">
-            <p>&copy; 2023 Home Automation System</p>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
-
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
     <script>
-    var slider1 = document.getElementById("lightbulb-slider-1");
-var slider2 = document.getElementById("lightbulb-slider-2");
-var slider3 = document.getElementById("lightbulb-slider-3");
-var slider4 = document.getElementById("lightbulb-slider-4");
+        $(document).ready(function() {
+            $('button[name="kitchenLightBulb"]').click(function(e) {
+                e.preventDefault();
+                var status = $(this).text() === 'ON' ? 'off' : 'on';
+                $.post('lightbulb.php', { kitchenLightBulb: status }, function() {
+                    location.reload();
+                });
+            });
 
-var sliderValue1 = document.getElementById("slider-value-1");
-var sliderValue2 = document.getElementById("slider-value-2");
-var sliderValue3 = document.getElementById("slider-value-3");
-var sliderValue4 = document.getElementById("slider-value-4");
+            $('button[name="livingRoomLightBulb"]').click(function(e) {
+                e.preventDefault();
+                var status = $(this).text() === 'ON' ? 'off' : 'on';
+                $.post('lightbulb.php', { livingRoomLightBulb: status }, function() {
+                    location.reload();
+                });
+            });
 
-slider1.addEventListener("input", function() {
-    sliderValue1.textContent = slider1.value;
-});
+            $('button[name="bedroomLightBulb"]').click(function(e) {
+                e.preventDefault();
+                var status = $(this).text() === 'ON' ? 'off' : 'on';
+                $.post('lightbulb.php', { bedroomLightBulb: status }, function() {
+                    location.reload();
+                });
+            });
 
-slider2.addEventListener("input", function() {
-    sliderValue2.textContent = slider2.value;
-});
+            $('button[name="bathroomLightBulb"]').click(function(e) {
+                e.preventDefault();
+                var status = $(this).text() === 'ON' ? 'off' : 'on';
+                $.post('lightbulb.php', { bathroomLightBulb: status }, function() {
+                    location.reload();
+                });
+            });
 
-slider3.addEventListener("input", function() {
-    sliderValue3.textContent = slider3.value;
-});
-
-slider4.addEventListener("input", function() {
-    sliderValue4.textContent = slider4.value;
-});
-
-</script>
-
-<script>
-    var toggleButtons = document.querySelectorAll(".toggle-button");
-
-    toggleButtons.forEach(function(button) {
-        button.addEventListener("click", function() {
-            if (button.textContent === "ON") {
-                button.textContent = "OFF";
-                button.classList.remove("btn-success");
-                button.classList.add("btn-danger");
-            } else {
-                button.textContent = "ON";
-                button.classList.remove("btn-danger");
-                button.classList.add("btn-success");
-            }
-        });
-    });
-</script>
-
-
-
-
-  <!--  <script>
-        // Get all the on/off buttons
-        var onOffButtons = document.querySelectorAll('.on-off-btn');
-
-        // Loop through each button and add a click event listener
-        onOffButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                // Get the current button text
-                var buttonText = this.innerText;
-
-                // Toggle the button text between "ON" and "OFF"
-                if (buttonText === "ON") {
-                    this.innerText = "OFF";
-                } else {
-                    this.innerText = "ON";
-                }
+            $('input[type="range"]').on('input', function() {
+                var value = $(this).val();
+                var id = $(this).attr('id');
+                var bulbId = id.split('-')[2];
+                $('#lightbulb-value-' + bulbId).text(value);
             });
         });
-    </script> -->
+    </script>
 </body>
 </html>

@@ -22,22 +22,22 @@
                 <a href="../../home-producer.html">Dashboard</a>
             </li>
             <li>
-                <a href="#">Shortcuts</a>
+                <a href="#">Consumers</a>
             </li>
             <li>
                 <a href="#">Overview</a>
             </li>
             
             <li>
-              <a href="../../../logout.php">
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                  </svg>
-                </span>
-                Logout
-              </a>
+                <a href="../logout.php">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                  </span>
+                  Logout
+                </a>
             </li>
             <li class="mt-lg-4">
               <a style="font-size:xxx-large;" href="#">
@@ -50,126 +50,103 @@
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <h1>Consumer 1's Cameras</h1>
-            <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-           
+    <div>
+        <div class="container-lg">
+          <nav style="background-color: rgb(12, 12, 12); height: 90px;" class="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light">Consumer 1 - All the Cameras</a>
+              <form class="d-flex mr-lg-3" role="search">
+                
+                
+                <input class="form-control me-2 mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light mr-lg-4" type="submit">Search</button>
+                <button class="btn btn-outline-light" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                </svg>
+                </button>
+              </form>
+            </div>
+          </nav>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
-
 </div>
 
 
+
   
-  <div class="container my-lg-5">
-    <div class="row">
-      <div class="col">
-
-        <div class="card justify-content-center" >
-          <div class="card-body text-center bg-primary">
-            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/>
-              </svg>
-              <h5  class="card-title mt-2">Exterior Front Door</h5> 
-          </div>
-          
-          <div class="card-body text-center">
-            <a href="securityCams/extFrontSecCam.html">
-              <button type="button" class="btn btn-primary w-50 align-self-center text-center ">See the statistics</button>
-            </a>    
-          </div>
-        </div>
-
-
-      </div>
-      <div class="col">
-        <div class="card justify-content-center" >
-          
-          <div class="card-body text-center">
-            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/>
-              </svg>
-              
-              <h5  class="card-title mt-2">Livingroom</h5>
-            
-            
-            
-            
-          </div>
-          
-          <div class="card-body text-center">
-            <a href="securityCams/livingroomSecCam.html">
-                <button type="button" class="btn btn-primary w-50 align-self-center text-center ">See the statistics</button>
-            </a>
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="col">
-        <div class="card justify-content-center" >
-          
-          <div class="card-body text-center">
-            
-            
-            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/>
-              </svg>
-              <h5  class="card-title mt-2">Garage </h5>
-            
-            
-            
-            
-          </div>
-          
-          <div class="card-body text-center">
-            <a href="securityCams/garageSecCam.html">
-                <button type="button" class="btn btn-primary w-50 align-self-center text-center ">See the statistics</button>
-            </a>
-            
-            
-          </div>
-        </div>
-
-
-      </div>
-      
-
+<div class="container my-lg-5">
     
-
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="card justify-content-center" >
-          
-          <div class="card-body text-center">
+    
+  <div class="row">
+    <div class="col-lg-3">
+      
+        <div class="card mb-3">
+          <img src="../../../img/security.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Livingroom</h5>
             
-            
-            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/>
-              </svg>
-              <h5  class="card-title mt-2">Street </h5>
-
-          </div>
-
-          <div class="card-body text-center">
-            <a href="securityCams/streetSecCam.html">
-                <button type="button" class="btn btn-primary w-50 align-self-center text-center ">See the statistics</button>
-            </a>
-            
-            
+            <a href="securityCams/livingroomSecCam.html">
+              <button type="button" class="btn btn-primary w-50 align-self-center text-center ">Statistics</button>
+            </a> 
           </div>
         </div>
 
-
-      </div>
+      
+      
     </div>
+    <div class="col-lg-3">
+      
+        <div class="card mb-3">
+          <img src="../../../img/security.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Exterior</h5>
+            
+            <a href="securityCams/extFrontSecCam.html">
+              <button type="button" class="btn btn-primary w-50 align-self-center text-center ">Statistics</button>
+          </a>
+          </div>
+        </div>
+      
+      
+    </div>
+    <div class="col-lg-3">
+      
+        <div class="card mb-3">
+          <img src="../../../img/security.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Garage</h5>
+            
+            <a href="securityCams/garageSecCam.html">
+              <button type="button" class="btn btn-primary w-50 align-self-center text-center ">Statistics</button>
+          </a>
+          </div>
+        </div>
+      
+      
+    </div>
+    <div class="col-lg-3">
+      
+        <div class="card mb-3">
+          <img src="../../../img/security.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Streets</h5>
+            
+            <a href="securityCams/streetSecCam.html">
+              <button type="button" class="btn btn-primary w-50 align-self-center text-center ">Statistics</button>
+          </a>
+          </div>
+        </div>
+      
+      
+    </div>
+  </div>
+  
+  
+    
+  
+
 
 
 
