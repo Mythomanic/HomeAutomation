@@ -54,7 +54,7 @@
         <div class="container-lg">
           <nav style="background-color: rgb(12, 12, 12); height: 90px;" class="navbar">
             <div class="container-fluid">
-              <a class="navbar-brand text-light">Consumer 1 - Bathroom Thermostat</a>
+              <a class="navbar-brand text-light">Consumer1 - Bathroom Lightbulb</a>
               <form class="d-flex mr-lg-3" role="search">
                 
                 
@@ -74,8 +74,7 @@
 </div>
 
 
-
-
+ 
   <div class="container-fluid mt-lg-4">
     <div class="row justify-content-end mx-lg-5">
       <div class="col-md-5">
@@ -130,7 +129,7 @@
       <div class="col-md-5 ml-4">
         <div class="card text-center" style="height:100%;">
           <div class="card-header">
-            <strong style="size: 50px;">Livingroom Lightbulb</strong>
+            <strong style="size: 50px;">Bathroom Lightbulb</strong>
           </div>
           <div class="card-body">
             <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
@@ -140,8 +139,36 @@
           </div>
           <div class="card">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><h3>ON</h3></li>
-              <li class="list-group-item"><h3>Light degree: 30</h3></li>
+              <?php
+                // Veritabanı bağlantısı
+                $servername = "localhost"; // Veritabanı sunucusunun adı veya IP adresi
+                $username = "root"; // Veritabanı kullanıcı adı
+                $password = ""; // Veritabanı şifre
+                $dbname = "webproje"; // Veritabanı adı
+        
+                // Bağlantı oluşturma
+                $conn = new mysqli($servername, $username, $password, $dbname);
+        
+                // Bağlantıyı kontrol etme
+                if ($conn->connect_error) {
+                  die("Veritabanı bağlantısı başarısız: " . $conn->connect_error);
+                }
+        
+                // Veri almak için sorgu
+                $sql = "SELECT * FROM lights WHERE light_name = 'bathLight' LIMIT 1";
+                $result = $conn->query($sql);
+        
+                if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+                    echo "<li id='status' class='list-group-item'><h3>" . $row['status'] . "</h3></li>";
+                  }
+                } else {
+                  echo "<li id='status' class='list-group-item'><h3>Veri bulunamadı.</h3></li>";
+                }
+        
+                // Veritabanı bağlantısını kapatma
+                $conn->close();
+              ?>
               <li class="list-group-item"><h3>Hourly Consumption 60w</h3></li>
             </ul>
           </div>

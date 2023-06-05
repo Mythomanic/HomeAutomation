@@ -137,8 +137,13 @@ body{
 }
 
 .card{
-  background-color: rgb(177, 177, 177);
+  background-color: rgb(235, 234, 234);
 }
 .card-body{
   text-align: center;
+}
+
+
+.container{
+  padding-left: 200px;
 }
