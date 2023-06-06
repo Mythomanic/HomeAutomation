@@ -75,81 +75,37 @@
 
   
   <div class="container-fluid mt-lg-4">
-    <div class="row justify-content-end mx-lg-5">
+    <div class="row justify-content-center mx-lg-5">
       <div class="col-md-5">
-
-        <div class="card">
-          <div class="card-header" style="height: 59px;">
-            
-            <strong><h3> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16">
-              <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
-            </svg> Power Consumption (kw)</h3></strong>
-          </div>
-          <canvas id="line-chart"></canvas>
-          <script
-              src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
-          <script>
-            new Chart(document.getElementById("line-chart"), {
-              type : 'line',
-              data : {
-                labels : ['Monday', 'Tuesday','Wednesday','Thursday',
-              'Friday','Saturday','Sunday'],
-                datasets : [
-                    {
-                      data : [ 1386, 205, 1321, 1516, 2107,
-                          2191, 1133, 1221, 1783, 1478 ],
-                      label : "Consumption",
-                      borderColor : "#3cba9f",
-                      fill : true
-                    }]
-              },
-              options : {
-                title : {
-                  display : true,
-                  text : 'Chart JS Line Chart Example'
-                }
-              }
-            });
-          </script>
-          <div class="card-footer text-body-secondary ">
-            Usage today: <strong>1kw</strong>
-
-            
-
-          </div>
-          
-        </div>
-
-       
-
-      </div>
-      
-
-      <div class="col-md-5 ml-4">
         <div class="card text-center" style="height:100%;">
           <div class="card-header">
             <strong style="size: 50px;">Livingroom Lightbulb</strong>
           </div>
           <div class="card-body">
-            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
-              <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
             </svg>
             
           </div>
           <div class="card">
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><h3>ON</h3></li>
-              <li class="list-group-item"><h3>Light degree: 30</h3></li>
-              <li class="list-group-item"><h3>Hourly Consumption 60w</h3></li>
+              <li class="list-group-item"><h3>BOŞ</h3></li>
+              
             </ul>
           </div>
           <div class="card-footer text-body-secondary">
             Active for 2h
           </div>
         </div>
+        
 
+       
 
       </div>
+      
+
+      
       
 
     

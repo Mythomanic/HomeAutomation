@@ -9,8 +9,6 @@
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/1c2ecd6357.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-
 </head>
 <body style="background-color:#bdc2e6">
     <header class="bg-dark text-white text-center py-4">
@@ -28,84 +26,74 @@
                         <a class="nav-link" href="#">Give us feedback</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../logout.php">Logout</a>
+                        <a class="nav-link" href="../../logout.php">Logout</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <main>
         <section class="container py-4">
-        <h2 class="text-center fw-bold" style="font-family: 'Roboto', sans-serif;">Welcome to Our Home Automation System</h2>
-        <p class="text-center fs-5" style="font-family: 'Roboto', sans-serif;">Our system makes it easy for you to control your home's lighting, temperature, security, and more with the touch of a button. Whether you're at home or away, our system gives you complete control over your home's environment.</p>  
+            <h2 class="text-center fw-bold" style="font-family: 'Roboto', sans-serif;">Welcome to Our Home Automation System</h2>
+            <p class="text-center fs-5" style="font-family: 'Roboto', sans-serif;">Our system makes it easy for you to control your home's lighting, temperature, security, and more with the touch of a button. Whether you're at home or away, our system gives you complete control over your home's environment.</p>  
         </section>
 
         <section class="container py-4">
-    <div class="row justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-secondary mb-3">
+                        <b><div class="card-header bg-secondary text-center">Exterior front door</div></b>
+                        <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
+                        <div class="card-body text-secondary bg-secondary text-center">
+                            <div class="input-group d-flex flex-column align-items-center">
+                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
+                                <p class="lock-status bg-dark">Unlocked</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-secondary mb-3">
-                <b><div class="card-header bg-secondary text-center">Exterior front door</div></b>
-                <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
-                <div class="card-body text-secondary bg-secondary text-center">
-                    <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                        
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-secondary mb-3">
+                        <b><div class="card-header bg-secondary text-center">Bedroom door</div></b>
+                        <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
+                        <div class="card-body text-secondary bg-secondary text-center">
+                            <div class="input-group d-flex flex-column align-items-center">
+                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
+                                <p id="bedroom" class="lock-status bg-dark">Unlocked</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-secondary mb-3">
+                        <b><div class="card-header bg-secondary text-center">Bathroom Safe</div></b>
+                        <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
+                        <div class="card-body text-secondary bg-secondary text-center">
+                            <div class="input-group d-flex flex-column align-items-center">
+                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
+                                <p id="bathroom" class="lock-status bg-dark">Unlocked</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-secondary mb-3">
+                        <b><div class="card-header bg-secondary text-center">Garage door</div></b>
+                        <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
+                        <div class="card-body text-secondary bg-secondary text-center">
+                            <div class="input-group d-flex flex-column align-items-center">
+                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
+                                <p id="garage" class="lock-status bg-dark">Unlocked</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-secondary mb-3">
-                <b><div class="card-header bg-secondary text-center">Bedroom door</div></b>
-                <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
-                <div class="card-body text-secondary bg-secondary text-center">
-                    <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-secondary mb-3">
-                <b><div class="card-header bg-secondary text-center">Bedroom Safe</div></b>
-                <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
-                <div class="card-body text-secondary bg-secondary text-center">
-                    <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-secondary mb-3">
-                <b><div class="card-header bg-secondary text-center">Garage door</div></b>
-                <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
-                <div class="card-body text-secondary bg-secondary text-center">
-                    <div class="input-group d-flex flex-column align-items-center">
-                        <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
-</section>
-
+        </section>
     </main>
     
     <footer class="bg-dark text-white text-center py-4" style="transform: translate(0%, 75%)">
@@ -118,47 +106,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
 
-<script>
-    
+    <script>
     var toggleButtons = document.querySelectorAll(".toggle-button");
 
-    toggleButtons.forEach(function(button) {
-        button.addEventListener("click", function() {
-            if (button.textContent === "Locked") {
+    toggleButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            var lockStatus = button.textContent;
+            var lockStatusText = button.parentNode.querySelector(".lock-status");
+
+            if (lockStatus === "Locked") {
                 button.textContent = "Unlocked";
                 button.classList.remove("btn-danger");
                 button.classList.add("btn-success");
+                lockStatusText.textContent = "Locked";
+                updateLockStatus(lockStatusText.id, "Locked"); // AJAX isteğini gönder
             } else {
                 button.textContent = "Locked";
                 button.classList.remove("btn-success");
                 button.classList.add("btn-danger");
+                lockStatusText.textContent = "Unlocked";
+                updateLockStatus(lockStatusText.id, "Unlocked"); // AJAX isteğini gönder
             }
         });
     });
 
+    function updateLockStatus(lockId, lockStatus) {
+        var xhr = new XMLHttpRequest();
+        var url = "update_lock_status.php"; // PHP dosyasının yolunu belirtin veya doğrudan kodu yerleştirin
+        var params = "lockId=" + lockId + "&lockStatus=" + lockStatus;
 
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText); // Sunucudan dönen yanıtı kontrol etmek için konsola yazdırabilirsiniz
+            }
+        }
+
+        xhr.send(params);
+    }
 </script>
-
-
-
-  <!--  <script>
-        // Get all the on/off buttons
-        var onOffButtons = document.querySelectorAll('.on-off-btn');
-
-        // Loop through each button and add a click event listener
-        onOffButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                // Get the current button text
-                var buttonText = this.innerText;
-
-                // Toggle the button text between "ON" and "OFF"
-                if (buttonText === "ON") {
-                    this.innerText = "OFF";
-                } else {
-                    this.innerText = "ON";
-                }
-            });
-        });
-    </script> -->
+    
 </body>
 </html>
