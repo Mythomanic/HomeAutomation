@@ -6,73 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../../style.css">
 </head>
 <body onload="startTime()">
     
-  <div id="wrapper" class="toggled">
+<div id="wrapper" class="toggled">
 
-    <!-- Sidebar -->
+<!-- Navbar -->
+
+<!-- /#sidebar-wrappers -->
+
     <div id="sidebar-wrapper">
-        <ul class="sidebar-nav text-center">
-            <li class="sidebar-brand text-center mt-3"> 
-              <a  style="font-size: larger;" href="">Home Automation</a>
-            </li>
-            <li class="text-center">
-                <a href="../../../home-producer.html">Dashboard</a>
-            </li>
-            <li>
-                <a href="#">Consumers</a>
-            </li>
-            <li>
-                <a href="#">Overview</a>
-            </li>
-            
-            <li>
-                <a href="../logout.php">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                    </svg>
-                  </span>
-                  Logout
-                </a>
-            </li>
-            <li class="mt-lg-4">
-              <a style="font-size:xxx-large;" href="#">
-                <div  id="txt"></div>
-              </a>
-            </li>
-            
-        </ul>
-    </div>
-    <!-- /#sidebar-wrapper -->
+    <ul class="sidebar-nav text-center">
+        <li class="sidebar-brand text-center mt-lg-4"> 
+            <svg style="color: azure;" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-house-gear-fill" viewBox="0 0 16 16">
+                <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5Z"/>
+                <path d="M11.07 9.047a1.5 1.5 0 0 0-1.742.26l-.02.021a1.5 1.5 0 0 0-.261 1.742 1.5 1.5 0 0 0 0 2.86 1.504 1.504 0 0 0-.12 1.07H3.5A1.5 1.5 0 0 1 2 13.5V9.293l6-6 4.724 4.724a1.5 1.5 0 0 0-1.654 1.03Z"/>
+                <path d="m13.158 9.608-.043-.148c-.181-.613-1.049-.613-1.23 0l-.043.148a.64.64 0 0 1-.921.382l-.136-.074c-.561-.306-1.175.308-.87.869l.075.136a.64.64 0 0 1-.382.92l-.148.045c-.613.18-.613 1.048 0 1.229l.148.043a.64.64 0 0 1 .382.921l-.074.136c-.306.561.308 1.175.869.87l.136-.075a.64.64 0 0 1 .92.382l.045.149c.18.612 1.048.612 1.229 0l.043-.15a.64.64 0 0 1 .921-.38l.136.074c.561.305 1.175-.309.87-.87l-.075-.136a.64.64 0 0 1 .382-.92l.149-.044c.612-.181.612-1.049 0-1.23l-.15-.043a.64.64 0 0 1-.38-.921l.074-.136c.305-.561-.309-1.175-.87-.87l-.136.075a.64.64 0 0 1-.92-.382ZM12.5 14a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/>
+            </svg>
+            <br> 
+            <p>___________________</p>
+        </li>
 
-    <!-- Page Content -->
+        <li class="sidebar-brand text-center"> 
+            <a  style="font-size:29px;" href="">Producer</a>
+        </li>
+    
+        <li class="text-center p-4">
+            <a href="../../../home-producer-dashboard.html">Dashboard</a>
+        </li>
+
+        <li>
+            <a href="../../../home-producer.html">Consumers</a>
+        </li>
+
+        <li class="text-center p-4">
+            <a href="../../../recent.html">Recents</a>
+        </li>
+        
+        <li>
+            <a href="../../../../logout.php">Logout </a>
+            <p>____________________</p>
+        </li>
+
+        <li class="pt-lg-5">
+          <a style="font-size:xx-large;" href="#">
+            <div  id="txt"></div>
+          </a>
+        </li>
+        
+    </ul>
+    </div>
     <div>
-        <div class="container-lg">
-          <nav style="background-color: rgb(12, 12, 12); height: 90px;" class="navbar">
-            <div class="container-fluid">
-              <a class="navbar-brand text-light">Consumer 1 - Bedroom Thermostat</a>
-              <form class="d-flex mr-lg-3" role="search">
-                
-                
-                <input class="form-control me-2 mr-lg-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light mr-lg-4" type="submit">Search</button>
-                <button class="btn btn-outline-light" >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
-                </svg>
-                </button>
-              </form>
-            </div>
-          </nav>
-        </div>
-    </div>
-    <!-- /#page-content-wrapper -->
+      <nav class="navbar">
+          <a style="font-size: xx-large;" class="navbar-brand text-light">Bedroom Heater of Consumer 1</a>
+          <form class="d-flex mr-lg-3" role="search">
+          <input class="form-control me-2 mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light mr-lg-4" type="submit">Search</button>
+            <button class="btn btn-outline-light" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+            </svg>
+        </button>
+        </form>
+      </nav>
 </div>
-
 
 
 
