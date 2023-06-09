@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/1c2ecd6357.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+
 </head>
 <body style="background-color:#bdc2e6">
     <header class="bg-dark text-white text-center py-4">
@@ -32,7 +34,7 @@
             </nav>
         </div>
     </header>
-
+    
     <main>
         <section class="container py-4">
             <h2 class="text-center fw-bold" style="font-family: 'Roboto', sans-serif;">Welcome to Our Home Automation System</h2>
@@ -41,14 +43,15 @@
 
         <section class="container py-4">
             <div class="row justify-content-center">
+
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-secondary mb-3">
-                        <b><div class="card-header bg-secondary text-center">Exterior front door</div></b>
+                        <b><div class="card-header bg-secondary text-center">Garage Lock</div></b>
                         <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                                <p class="lock-status bg-dark">Unlocked</p>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="garageLock-status">OFF</span>
+                                <button class="btn btn-success toggle-button mb-3" onclick="toggleLockStatus('garageLock')">Click to OPEN</button>
                             </div>
                         </div>
                     </div>
@@ -56,12 +59,12 @@
 
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-secondary mb-3">
-                        <b><div class="card-header bg-secondary text-center">Bedroom door</div></b>
+                        <b><div class="card-header bg-secondary text-center">Exterior Lock</div></b>
                         <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                                <p id="bedroom" class="lock-status bg-dark">Unlocked</p>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="exteriorLock-status">OFF</span>
+                                <button class="btn btn-success toggle-button mb-3" onclick="toggleLockStatus('exteriorLock')">Click to OPEN</button>
                             </div>
                         </div>
                     </div>
@@ -69,84 +72,66 @@
 
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-secondary mb-3">
-                        <b><div class="card-header bg-secondary text-center">Bathroom Safe</div></b>
+                        <b><div class="card-header bg-secondary text-center">Bedroom Lock</div></b>
                         <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                                <p id="bathroom" class="lock-status bg-dark">Unlocked</p>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="bedLock-status">ON</span>
+                                <button class="btn btn-success toggle-button mb-3" onclick="toggleLockStatus('bedLock')">Click to CLOSE</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-secondary mb-3">
-                        <b><div class="card-header bg-secondary text-center">Garage door</div></b>
                         <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
-                            <div class="input-group d-flex flex-column align-items-center">
-                                <button class="btn btn-danger toggle-button mb-3">Locked</button>
-                                <p id="garage" class="lock-status bg-dark">Unlocked</p>
-                            </div>
+                            <h5 class="card-title">Add another lightbulb</h5>
+                            <p class="card-text">Click the button below to add a new lightbulb.</p>
+                            <button class="btn btn-primary">Add another lightbulb</button>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
+
     </main>
     
-    <footer class="bg-dark text-white text-center py-4" style="transform: translate(0%, 75%)">
-        <div class="container">
-            <p>&copy; 2023 Home Automation System</p>
-        </div>
-    </footer>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
 
     <script>
-    var toggleButtons = document.querySelectorAll(".toggle-button");
+        function toggleLockStatus(lockName) {
+            var nowStatusElement = document.getElementById(lockName + "-status");
+            var toggleButton = document.querySelector("#" + lockName + "-card .toggle-button");
+            var nowStatus = nowStatusElement.textContent;
 
-    toggleButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            var lockStatus = button.textContent;
-            var lockStatusText = button.parentNode.querySelector(".lock-status");
+            var newStatus = (nowStatus === "ON") ? "OFF" : "ON";
 
-            if (lockStatus === "Locked") {
-                button.textContent = "Unlocked";
-                button.classList.remove("btn-danger");
-                button.classList.add("btn-success");
-                lockStatusText.textContent = "Locked";
-                updateLockStatus(lockStatusText.id, "Locked"); // AJAX isteğini gönder
-            } else {
-                button.textContent = "Locked";
-                button.classList.remove("btn-success");
-                button.classList.add("btn-danger");
-                lockStatusText.textContent = "Unlocked";
-                updateLockStatus(lockStatusText.id, "Unlocked"); // AJAX isteğini gönder
-            }
-        });
-    });
-
-    function updateLockStatus(lockId, lockStatus) {
-        var xhr = new XMLHttpRequest();
-        var url = "update_lock_status.php"; // PHP dosyasının yolunu belirtin veya doğrudan kodu yerleştirin
-        var params = "lockId=" + lockId + "&lockStatus=" + lockStatus;
-
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                console.log(xhr.responseText); // Sunucudan dönen yanıtı kontrol etmek için konsola yazdırabilirsiniz
-            }
+            $.ajax({
+                type: "POST",
+                url: "baglanti-lock.php",
+                data: { lockName: lockName, status: newStatus },
+                success: function(response) {
+                    if (response === "success") {
+                        nowStatusElement.textContent = newStatus;
+                        toggleButton.textContent = (newStatus === "ON") ? "Click to CLOSE" : "Click to OPEN";
+                        toggleButton.classList.toggle("btn-danger");
+                        toggleButton.classList.toggle("btn-success");
+                    } else {
+                        alert("An error occurred. Please try again.");
+                    }
+                },
+                error: function() {
+                    alert("An error occurred. Please try again.");
+                }
+            });
         }
+    </script>
 
-        xhr.send(params);
-    }
-</script>
-    
 </body>
 </html>

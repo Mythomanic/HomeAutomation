@@ -128,8 +128,9 @@
           <div class="card-header">
             <strong style="size: 50px;">Livingroom Heater</strong>
           </div>
-          <div class="card-body">
+          <div style="background-image: url('../../../../img/Picture2.jpg')" class="card-body">
             <img style="width:300px" src="../../../../img/Picture2.jpg" alt="">
+            
             
           </div>
           <div class="card">

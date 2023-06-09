@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cameras of Consumer 1</title>
+    <title>Lights of Consumer 1</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../../style.css" />
+    <script src="../../script.js"></script>
   </head>
   <body onload="startTime()">
     <div id="wrapper" class="toggled">
@@ -76,7 +77,7 @@
       <div>
         <nav class="navbar">
           <a style="font-size: xx-large" class="navbar-brand text-light"
-            >Security Cameras of Consumer 1</a
+            >Lights of Consumer 1</a
           >
           <form class="d-flex mr-lg-3" role="search">
             <input
@@ -107,19 +108,20 @@
       </div>
     </div>
 
+    <h2 class="text-center mt-lg-4 mb-lg-4">Consumer 1's Lightbulbs</h2>
     <div class="container my-lg-5">
       <div class="row">
         <div class="col-lg-3">
           <div class="card mb-3">
             <img
-              src="../../../img/security.jpeg"
+              src="../../../img/lightbulb.jpg"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
               <h5 class="card-title">Livingroom</h5>
 
-              <a href="securityCams/livingroomSecCam.html">
+              <a href="lightBulbs/livingRoomLightBulb.php">
                 <button
                   type="button"
                   class="btn btn-primary w-50 align-self-center text-center"
@@ -133,14 +135,14 @@
         <div class="col-lg-3">
           <div class="card mb-3">
             <img
-              src="../../../img/security.jpeg"
+              src="../../../img/lightbulb.jpg"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Exterior</h5>
+              <h5 class="card-title">Bedroom</h5>
 
-              <a href="securityCams/extFrontSecCam.html">
+              <a href="lightBulbs/bedroomLightBulb.php">
                 <button
                   type="button"
                   class="btn btn-primary w-50 align-self-center text-center"
@@ -154,14 +156,14 @@
         <div class="col-lg-3">
           <div class="card mb-3">
             <img
-              src="../../../img/security.jpeg"
+              src="../../../img/lightbulb.jpg"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Garage</h5>
+              <h5 class="card-title">Kitchen</h5>
 
-              <a href="securityCams/garageSecCam.html">
+              <a href="lightBulbs/kitchenLightBulb.php">
                 <button
                   type="button"
                   class="btn btn-primary w-50 align-self-center text-center"
@@ -175,14 +177,14 @@
         <div class="col-lg-3">
           <div class="card mb-3">
             <img
-              src="../../../img/security.jpeg"
+              src="../../../img/lightbulb.jpg"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Streets</h5>
+              <h5 class="card-title">Bathroom</h5>
 
-              <a href="securityCams/streetSecCam.html">
+              <a href="lightBulbs/bathroomLightBulb.php">
                 <button
                   type="button"
                   class="btn btn-primary w-50 align-self-center text-center"
@@ -194,27 +196,164 @@
           </div>
         </div>
       </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <div style="width:300px" class="card">
+            <div class="card-header">
+              OPEN LIGHTS
+            </div>
+            <ul class="list-group list-group-flush">
+              <?php
+                // Veritabanı bağlantısı
+                $servername = "localhost"; // Veritabanı sunucusunun adı veya IP adresi
+                $username = "root"; // Veritabanı kullanıcı adı
+                $password = ""; // Veritabanı şifre
+                $dbname = "webproje"; // Veritabanı adı
+        
+                // Bağlantı oluşturma
+                $conn = new mysqli($servername, $username, $password, $dbname);
+        
+                // Bağlantıyı kontrol etme
+                if ($conn->connect_error) {
+                  die("Veritabanı bağlantısı başarısız: " . $conn->connect_error);
+                }
+        
+                // Veri almak için sorgu
+                $sql = "SELECT * FROM lights WHERE light_name = 'kitchenLight' LIMIT 1";
+                $result = $conn->query($sql);
+        
+                if ($result->num_rows > 0 ) {
+                  while ($row = $result->fetch_assoc()) {
+                    if($row['status']=='ON'){
+                      echo "<li id='status' class='list-group-item'><h3>". $row['light_name'] . ' is ' . $row['status']   . "</h3></li>";
+                    }
+                    
+                  }
+                } else {
+                  echo "<li id='status' class='list-group-item'><h3></h3></li>";
+                }
+
+                
+        
+                // Veritabanı bağlantısını kapatma
+                $conn->close();
+              ?>
+              <?php
+                // Veritabanı bağlantısı
+                $servername = "localhost"; // Veritabanı sunucusunun adı veya IP adresi
+                $username = "root"; // Veritabanı kullanıcı adı
+                $password = ""; // Veritabanı şifre
+                $dbname = "webproje"; // Veritabanı adı
+        
+                // Bağlantı oluşturma
+                $conn = new mysqli($servername, $username, $password, $dbname);
+        
+                // Bağlantıyı kontrol etme
+                if ($conn->connect_error) {
+                  die("Veritabanı bağlantısı başarısız: " . $conn->connect_error);
+                }
+        
+                // Veri almak için sorgu
+                $sql = "SELECT * FROM lights WHERE light_name = 'bedLight' LIMIT 1";
+                $result = $conn->query($sql);
+        
+                if ($result->num_rows > 0 ) {
+                  while ($row = $result->fetch_assoc()) {
+                    if($row['status']=='ON'){
+                      echo "<li id='status' class='list-group-item'><h3>". $row['light_name'] . ' is ' . $row['status']   . "</h3></li>";
+                    }
+                    
+                  }
+                } else {
+                  echo "<li id='status' class='list-group-item'><h3></h3></li>";
+                }
+
+                
+        
+                // Veritabanı bağlantısını kapatma
+                $conn->close();
+              ?>
+              <?php
+                // Veritabanı bağlantısı
+                $servername = "localhost"; // Veritabanı sunucusunun adı veya IP adresi
+                $username = "root"; // Veritabanı kullanıcı adı
+                $password = ""; // Veritabanı şifre
+                $dbname = "webproje"; // Veritabanı adı
+        
+                // Bağlantı oluşturma
+                $conn = new mysqli($servername, $username, $password, $dbname);
+        
+                // Bağlantıyı kontrol etme
+                if ($conn->connect_error) {
+                  die("Veritabanı bağlantısı başarısız: " . $conn->connect_error);
+                }
+        
+                // Veri almak için sorgu
+                $sql = "SELECT * FROM lights WHERE light_name = 'bathLight' LIMIT 1";
+                $result = $conn->query($sql);
+        
+                if ($result->num_rows > 0 ) {
+                  while ($row = $result->fetch_assoc()) {
+                    if($row['status']=='ON'){
+                      echo "<li id='status' class='list-group-item'><h3>". $row['light_name'] . ' is ' . $row['status']   . "</h3></li>";
+                    }
+                    
+                  }
+                } else {
+                  echo "<li id='status' class='list-group-item'><h3></h3></li>";
+                }
+
+                
+        
+                // Veritabanı bağlantısını kapatma
+                $conn->close();
+              ?>
+              <?php
+                // Veritabanı bağlantısı
+                $servername = "localhost"; // Veritabanı sunucusunun adı veya IP adresi
+                $username = "root"; // Veritabanı kullanıcı adı
+                $password = ""; // Veritabanı şifre
+                $dbname = "webproje"; // Veritabanı adı
+        
+                // Bağlantı oluşturma
+                $conn = new mysqli($servername, $username, $password, $dbname);
+        
+                // Bağlantıyı kontrol etme
+                if ($conn->connect_error) {
+                  die("Veritabanı bağlantısı başarısız: " . $conn->connect_error);
+                }
+        
+                // Veri almak için sorgu
+                $sql = "SELECT * FROM lights WHERE light_name = 'livRoomLight' LIMIT 1";
+                $result = $conn->query($sql);
+        
+                if ($result->num_rows > 0 ) {
+                  while ($row = $result->fetch_assoc()) {
+                    if($row['status']=='ON'){
+                      echo "<li id='status' class='list-group-item'><h3>". $row['light_name'] . ' is ' . $row['status']   . "</h3></li>";
+                    }
+                    
+                  }
+                } else {
+                  echo "<li id='status' class='list-group-item'><h3></h3></li>";
+                }
+
+                
+        
+                // Veritabanı bağlantısını kapatma
+                $conn->close();
+              ?>
+              
+            </ul>
+          </div>
+          
+        </div>
+        </div>
+       
+        
+      </div>
     </div>
 
-    <script>
-      function startTime() {
-        const today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-        let s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
-        setTimeout(startTime, 1000);
-      }
-
-      function checkTime(i) {
-        if (i < 10) {
-          i = "0" + i;
-        } // add zero in front of numbers < 10
-        return i;
-      }
-    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

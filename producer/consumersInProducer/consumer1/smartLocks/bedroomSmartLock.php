@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cameras of Consumer 1</title>
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../../style.css" />
+    <script src="../../../script.js"></script>
   </head>
   <body onload="startTime()">
     <div id="wrapper" class="toggled">
@@ -50,19 +51,19 @@
           </li>
 
           <li class="text-center p-4">
-            <a href="../../home-producer-dashboard.html">Dashboard</a>
+            <a href="../../../home-producer-dashboard.html">Dashboard</a>
           </li>
 
           <li>
-            <a href="../../home-producer.html">Consumers</a>
+            <a href="../../../home-producer.html">Consumers</a>
           </li>
 
           <li class="text-center p-4">
-            <a href="../../recent.html">Recents</a>
+            <a href="../../../recent.html">Recents</a>
           </li>
 
           <li>
-            <a href="../../../logout.php">Logout </a>
+            <a href="../../../../logout.php">Logout </a>
             <p>____________________</p>
           </li>
 
@@ -76,7 +77,7 @@
       <div>
         <nav class="navbar">
           <a style="font-size: xx-large" class="navbar-brand text-light"
-            >Security Cameras of Consumer 1</a
+            >Bedroom Lock of Consumer 1</a
           >
           <form class="d-flex mr-lg-3" role="search">
             <input
@@ -107,114 +108,71 @@
       </div>
     </div>
 
-    <div class="container my-lg-5">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="card mb-3">
-            <img
-              src="../../../img/security.jpeg"
-              class="card-img-top"
-              alt="..."
-            />
+    <div class="container-fluid mt-lg-4">
+      <div class="row justify-content-center mx-lg-5">
+        <div class="col-md-5">
+          <div class="card text-center" style="height: 100%">
+            <div class="card-header">
+              <strong style="size: 50px">Bedroom Lock</strong>
+            </div>
             <div class="card-body">
-              <h5 class="card-title">Livingroom</h5>
-
-              <a href="securityCams/livingroomSecCam.html">
-                <button
-                  type="button"
-                  class="btn btn-primary w-50 align-self-center text-center"
-                >
-                  Statistics
-                </button>
-              </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="90"
+                height="90"
+                fill="currentColor"
+                class="bi bi-lock"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+                />
+              </svg>
+            </div>
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <?php
+                  // Veritabanı bağlantısı
+                  $servername = "localhost"; // Veritabanı sunucusunun adı veya IP adresi
+                  $username = "root"; // Veritabanı kullanıcı adı
+                  $password = ""; // Veritabanı şifre
+                  $dbname = "webproje"; // Veritabanı adı
+          
+                  // Bağlantı oluşturma
+                  $conn = new mysqli($servername, $username, $password, $dbname);
+          
+                  // Bağlantıyı kontrol etme
+                  if ($conn->connect_error) {
+                    die("Veritabanı bağlantısı başarısız: " . $conn->connect_error);
+                  }
+          
+                  // Veri almak için sorgu
+                  $sql = "SELECT * FROM locks WHERE lock_name = 'bedLock' LIMIT 1";
+                  $result = $conn->query($sql);
+          
+                  if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                      echo "<li id='status' class='list-group-item'><h3>" . $row['status'] . "</h3></li>";
+                    }
+                  } else {
+                    echo "<li id='status' class='list-group-item'><h3>Veri bulunamadı.</h3></li>";
+                  }
+          
+                  // Veritabanı bağlantısını kapatma
+                  $conn->close();
+                ?>
+                
+              </ul>
+            </div>
+            <div class="card-footer text-body-secondary">
+              Active for 2h
             </div>
           </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card mb-3">
-            <img
-              src="../../../img/security.jpeg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Exterior</h5>
-
-              <a href="securityCams/extFrontSecCam.html">
-                <button
-                  type="button"
-                  class="btn btn-primary w-50 align-self-center text-center"
-                >
-                  Statistics
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card mb-3">
-            <img
-              src="../../../img/security.jpeg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Garage</h5>
-
-              <a href="securityCams/garageSecCam.html">
-                <button
-                  type="button"
-                  class="btn btn-primary w-50 align-self-center text-center"
-                >
-                  Statistics
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card mb-3">
-            <img
-              src="../../../img/security.jpeg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Streets</h5>
-
-              <a href="securityCams/streetSecCam.html">
-                <button
-                  type="button"
-                  class="btn btn-primary w-50 align-self-center text-center"
-                >
-                  Statistics
-                </button>
-              </a>
-            </div>
-          </div>
+            
         </div>
       </div>
     </div>
 
-    <script>
-      function startTime() {
-        const today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-        let s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
-        setTimeout(startTime, 1000);
-      }
-
-      function checkTime(i) {
-        if (i < 10) {
-          i = "0" + i;
-        } // add zero in front of numbers < 10
-        return i;
-      }
-    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
