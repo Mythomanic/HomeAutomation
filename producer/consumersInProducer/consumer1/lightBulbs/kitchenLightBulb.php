@@ -44,7 +44,7 @@
         </li>
 
         <li class="text-center p-4">
-            <a href="../../../recent.html">Recents</a>
+            <a href="../../../devices.php">Devices</a>
         </li>
         
         <li>

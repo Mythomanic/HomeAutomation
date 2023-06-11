@@ -50,7 +50,7 @@
                         <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="garageLock-status">OFF</span>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="garageLock-status">ON</span>
                                 <button class="btn btn-success toggle-button mb-3" onclick="toggleLockStatus('garageLock')">Click to OPEN</button>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                         <img class="card-img-top" src="..\..\img\smartlock.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="exteriorLock-status">OFF</span>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="exteriorLock-status">ON</span>
                                 <button class="btn btn-success toggle-button mb-3" onclick="toggleLockStatus('exteriorLock')">Click to OPEN</button>
                             </div>
                         </div>

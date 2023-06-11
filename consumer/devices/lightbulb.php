@@ -50,7 +50,7 @@
                         <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="kitchenLight-status">OFF</span>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="kitchenLight-status">ON</span>
                                 <button class="btn btn-success toggle-button mb-3" onclick="toggleLightStatus('kitchenLight')">Click to OPEN</button>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                         <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="livRoomLight-status">OFF</span>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="livRoomLight-status">ON</span>
                                 <button class="btn btn-success toggle-button mb-3" onclick="toggleLightStatus('livRoomLight')">Click to OPEN</button>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
                                 <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="bedLight-status">ON</span>
-                                <button class="btn btn-success toggle-button mb-3" onclick="toggleLightStatus('bedLight')">Click to CLOSE</button>
+                                <button class="btn btn-success toggle-button mb-3" onclick="toggleLightStatus('bedLight')">Click to OPEN</button>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                         <img class="card-img-top" src="..\..\img\lightbulb.jpg" alt="Card image cap">
                         <div class="card-body text-secondary bg-secondary text-center">
                             <div class="input-group d-flex flex-column align-items-center">
-                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="bathLight-status">OFF</span>
+                                <span class="input-group-text flex-fill d-flex justify-content-center align-items-center" id="bathLight-status">ON</span>
                                 <button class="btn btn-success toggle-button mb-3" onclick="toggleLightStatus('bathLight')">Click to OPEN</button>
                             </div>
                         </div>
