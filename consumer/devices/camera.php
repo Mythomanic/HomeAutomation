@@ -101,6 +101,18 @@
             </div>
         </div>
 
+        <div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card border-secondary mb-3">
+    <img class="card-img-top" src="..\..\img\security.jpeg" alt="Card image cap">
+    <div class="card-body text-secondary bg-secondary text-center">
+      <h5 class="card-title">Add another camera</h5>
+      <p class="card-text">Click the button below to add a new camera.</p>
+      <button id="addCameraButton" class="btn btn-primary">Add another camera</button>
+    </div>
+  </div>
+</div>
+
+
 
 
     </div>
@@ -117,6 +129,83 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+
+    <script>
+  var cameraCount = 1; // Variable to track the number of added cameras
+
+  function addCamera() {
+    // Create a new camera card
+    var newCameraCard = document.createElement("div");
+    newCameraCard.className = "col-sm-6 col-md-4 col-lg-3";
+
+    var cardContent = `
+      <div class="card border-secondary mb-3">
+        <b><div class="card-header bg-secondary text-center">New Camera ${cameraCount}</div></b>
+        <img class="card-img-top" src="..\\..\\img\\security.jpeg" alt="Card image cap">
+        <div class="card-body text-secondary bg-secondary text-center">
+          <div class="input-group d-flex flex-column align-items-center">
+            <button class="btn btn-primary toggle-button mb-3">View</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    newCameraCard.innerHTML = cardContent;
+
+    // Append the new camera card to the row
+    var cameraRow = document.querySelector(".row");
+    cameraRow.insertBefore(newCameraCard, cameraRow.lastElementChild);
+
+    cameraCount++; // Increment the camera count
+  }
+
+  // Add event listener to the "Add another camera" button
+  var addCameraButton = document.getElementById("addCameraButton");
+  addCameraButton.addEventListener("click", addCamera);
+</script>
+
+
+
+
+
+
+  <!--  <script>
+  var cameraCount = 1; // Variable to track the number of added cameras
+
+  function addCamera() {
+    // Create a new camera card
+    var newCameraCard = document.createElement("div");
+    newCameraCard.className = "col-sm-6 col-md-4 col-lg-3";
+
+    var cardContent = `
+  <div class="card border-secondary mb-3">
+    <b><div class="card-header bg-secondary text-center">New Camera ${cameraCount}</div></b>
+    <img class="card-img-top" src="..\\..\\img\\security.jpeg" alt="Card image cap">
+    <div class="card-body text-secondary bg-secondary text-center">
+      <div class="input-group d-flex flex-column align-items-center">
+        <button class="btn btn-primary toggle-button mb-3">View</button>
+      </div>
+    </div>
+  </div>
+`;
+
+
+    newCameraCard.innerHTML = cardContent;
+
+    // Append the new camera card to the row
+    var cameraRow = document.querySelector(".row");
+    cameraRow.appendChild(newCameraCard);
+
+    cameraCount++; // Increment the camera count
+  }
+
+  // Add event listener to the "Add another camera" button
+  var addCameraButton = document.querySelector(".btn.btn-primary");
+  addCameraButton.addEventListener("click", addCamera);
+</script>  -->
+
+
+
 
     
 

@@ -124,6 +124,19 @@
                     </div>
                 </div>
 
+                <div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card border-secondary mb-3">
+    <img class="card-img-top" src="..\..\img\thermostat.jpg" alt="Card image cap">
+    <div class="card-body text-secondary bg-secondary text-center">
+      <h5 class="card-title">Add another thermostat</h5>
+      <p class="card-text">Click the button below to add a new thermostat.</p>
+      <button id="addCameraButton" class="btn btn-primary">Add another thermostat</button>
+    </div>
+  </div>
+</div>
+
+            </div>
+
             </div>
         </section>
 
@@ -132,6 +145,54 @@
     <footer class="bg-dark text-white text-center py-4" style="transform: translate(0%, 75%)">
         <p>&copy; 2023 Home Automation System. All Rights Reserved.</p>
     </footer>
+
+
+
+    <script>
+  var cameraCount = 1; // Variable to track the number of added cameras
+
+  function addCamera() {
+    // Create a new camera card
+    var newCameraCard = document.createElement("div");
+    newCameraCard.className = "col-sm-6 col-md-4 col-lg-3";
+
+    var cardContent = `
+      <div class="card border-secondary mb-3">
+        <b><div class="card-header bg-secondary text-center">New Thermostat ${cameraCount}</div></b>
+        <img class="card-img-top" src="..\\..\\img\\thermostat.jpg" alt="Card image cap">
+        <div class="card-body text-secondary bg-secondary text-center">
+          <div class="input-group d-flex flex-column align-items-center">
+            <button class="btn btn-success toggle-button mb-3">ON</button>
+            <div class="input-group-prepend">
+              <input type="number" class="form-control temperature-input">
+              <button class="btn btn-primary submit-button">Submit</button>
+            </div>
+            <div class="mt-3">
+              <span class="input-group-text">Temperature:</span>
+              <span class="input-group-text entered-value">25</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    newCameraCard.innerHTML = cardContent;
+
+    // Append the new camera card to the row
+    var cameraRow = document.querySelector(".row");
+    cameraRow.insertBefore(newCameraCard, cameraRow.lastElementChild);
+
+    cameraCount++; // Increment the camera count
+  }
+
+  // Add event listener to the "Add another camera" button
+  var addCameraButton = document.getElementById("addCameraButton");
+  addCameraButton.addEventListener("click", addCamera);
+</script>
+
+
+
+
 
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
