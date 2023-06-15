@@ -145,7 +145,7 @@
 
     var cardContent = `
       <div class="card border-secondary mb-3">
-        <b><div class="card-header bg-secondary text-center">Bedroom Lock ${cameraCount}</div></b>
+        <b><div class="card-header bg-secondary text-center">New Lock ${cameraCount}</div></b>
         <img class="card-img-top" src="..\\..\\img\\smartlock.jpg" alt="Card image cap">
         <div class="card-body text-secondary bg-secondary text-center">
           <div class="input-group d-flex flex-column align-items-center">
