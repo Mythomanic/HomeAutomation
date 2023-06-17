@@ -28,6 +28,10 @@ if ($checkResult->num_rows > 0) {
 
     if ($conn->query($updateQuery) === TRUE) {
         echo "Veri başarıyla güncellendi";
+        // Loglama
+        $logMessage = "$name güncellendi - Sıcaklık: $temperature, Durum: $status";
+        $logSql = "INSERT INTO log (action) VALUES ('$logMessage')";
+        $conn->query($logSql);
     } else {
         echo "Veri güncellenirken hata oluştu: " . $conn->error;
     }
@@ -37,6 +41,10 @@ if ($checkResult->num_rows > 0) {
 
     if ($conn->query($insertQuery) === TRUE) {
         echo "Veri başarıyla eklendi";
+        // Loglama
+        $logMessage = "Termostat eklendi - İsim: $name, Sıcaklık: $temperature, Durum: $status";
+        $logSql = "INSERT INTO log (action) VALUES ('$logMessage')";
+        $conn->query($logSql);
     } else {
         echo "Veri eklenirken hata oluştu: " . $conn->error;
     }

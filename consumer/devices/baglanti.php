@@ -16,6 +16,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lightName = $_POST["lightName"];
     $status = $_POST["status"];
+    $statusText = $status == 'on' ? 'Açık' : 'Kapalı';
 
     // Veritabanında ilgili ışığın mevcut olup olmadığını kontrol edin
     $checkSql = "SELECT COUNT(*) as count FROM lights WHERE light_name = '$lightName'";
@@ -30,6 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($insertSql) === TRUE) {
             // Ekleme işlemi başarılıysa "success" yanıtını döndür
             echo "success";
+            // Loglama
+            $logSql = "INSERT INTO log (action) VALUES ('Işık açıldı: $lightName, Durum: $statusText')";
+            $conn->query($logSql);
         } else {
             // Ekleme işlemi başarısız olduysa hata mesajını döndür
             echo "Hata: " . $insertSql . "<br>" . $conn->error;
@@ -41,6 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($updateSql) === TRUE) {
             // Güncelleme işlemi başarılıysa "success" yanıtını döndür
             echo "success";
+            // Loglama
+            $logSql = "INSERT INTO log (action) VALUES ('Işık durumu güncellendi: $lightName, Durum: $statusText')";
+            $conn->query($logSql);
         } else {
             // Güncelleme işlemi başarısız olduysa hata mesajını döndür
             echo "Hata: " . $updateSql . "<br>" . $conn->error;
