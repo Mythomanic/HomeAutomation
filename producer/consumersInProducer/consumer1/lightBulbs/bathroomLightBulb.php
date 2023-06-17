@@ -43,11 +43,14 @@
         <li class="text-center p-4">
             <a href="../../../devices.php">Devices</a>
         </li>
-        
-        <li>
-            <a href="../../../../logout.php">Logout </a>
+        <li class="text-center">
+            <a href="../../../logs.php">Logs</a>
+          </li>
+
+          <li class="text-center p-4">
+          <a href="../../../../logout.php">Logout </a>
             <p>____________________</p>
-        </li>
+          </li>
 
         <li class="pt-lg-5">
           <a style="font-size:xx-large;" href="#">

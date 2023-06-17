@@ -63,7 +63,7 @@
           </li>
 
           <li>
-            <a href="../../../logout.php">Logout </a>
+          <a href="../../../logout.php">Logout </a>
             <p>____________________</p>
           </li>
 

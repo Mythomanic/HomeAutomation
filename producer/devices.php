@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recent Dones</title>
+    <title>Devices</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -60,7 +60,11 @@
             <a href="devices.php">Devices</a>
           </li>
 
-          <li>
+          <li class="text-center">
+            <a href="logs.php">Logs</a>
+          </li>
+
+          <li class="text-center p-4">
             <a href="../logout.php">Logout </a>
             <p>____________________</p>
           </li>
@@ -75,7 +79,7 @@
       <div>
         <nav class="navbar">
           <a style="font-size: xx-large" class="navbar-brand text-light">
-            Recently Dones</a
+            Devices</a
           >
           <form class="d-flex mr-lg-3" role="search">
             <input
